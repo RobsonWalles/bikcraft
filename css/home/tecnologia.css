@@ -1,0 +1,82 @@
+.tecnologia-bg {
+  background-color: var(--cor-12);
+  box-shadow: inset 0px 80px var(--cor-0), inset 0px -80px var(--cor-0);
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+}
+
+.tecnologia-imagem img {
+  width: 100%;
+  height: 100%; /*Faz com que a imagem sempre ocupe 100% do heigth no campo em que está*/
+  object-fit: cover; /*Permite não esmagar a foto, mas fazer um cover dela*/
+  object-position: left; /*Sempre alinha a imagem de um lado, nesse caso a esquerda */
+}
+
+.tecnologia-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+/* O sinal de > fala que é apenas ao span que é filho direto nesse caso, e não a toda a classe */
+.tecnologia-conteudo > span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2 {
+  margin-bottom: 32px;
+}
+.tecnologia-conteudo > p {
+  margin-bottom: 20px;
+}
+
+.tecnologia a {
+  margin-bottom: 80px;
+}
+
+.tecnologia-opcoes {
+  display: flex;
+  gap: 40px;
+}
+
+.tecnologia-opcoes h3 {
+  margin-bottom: 8px;
+  width: max-content;
+}
+
+.tecnologia-opcoes img {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .tecnologia-bg {
+    box-shadow: initial;
+  }
+
+  .tecnologia-imagem {
+    display: none;
+  }
+  .tecnologia {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia a {
+    margin-bottom: 60px;
+  }
+
+  .tecnologia-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tecnologia-opcoes {
+    flex-direction: column;
+  }
+}
